@@ -21,4 +21,4 @@ On Blackboard, please submit a screenshot that
 clearly shows your repository information. For
 instructions on how to take a good screenshot,
 see this article on
-[WikiHow](https://www.wikihow.com/Take-a-Screen-Shot-(Screen-Capture).
+[WikiHow](https://www.wikihow.com/Take-a-Screen-Shot-(Screen-Capture)).
