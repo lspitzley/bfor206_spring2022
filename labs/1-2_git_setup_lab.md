@@ -1,5 +1,5 @@
 # BFOR 206 Lab
-## Class 1-2
+## Class 1-2: Github Setup
 
 # Task Description
 Create a Github account (if needed), then create a private
@@ -14,7 +14,7 @@ To submit this lab, take a screenshot of your repository
 homepage. Make sure the README is visible.
 
 The screenshot should look like so:
-![image](1-2_github_screenshot.jpg)
+![image](images/1-2_github_screenshot.jpg)
 
 # Submission instructions
 On Blackboard, please submit a screenshot that
