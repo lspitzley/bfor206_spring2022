@@ -10,8 +10,8 @@ bar at the top of the screen, on the left side.
 There is no input for this lab.
 
 # Output
-To submit this lab, take a screenshot of your repository
-homepage. Make sure the README is visible.
+To submit this lab, take a screenshot of your virtual
+machine with the terminal running.
 
 The screenshot should look like this (you do not need to `echo`
   some text like I did):
