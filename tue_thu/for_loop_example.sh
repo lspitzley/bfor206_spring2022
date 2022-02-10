@@ -2,7 +2,7 @@
 
 # examples of different for loop control statements
 
-# usage: Argument between 1 and 4 to run a specific loop
+# usage: Argument between 1 and 5 to run a specific loop
 # example: bash for_loop_example.sh 3 
 
 # make sure there is an argument
@@ -47,4 +47,14 @@ then
 	do
 		echo "The value of \$i is $i"
 	done
+
+elif [ $1 -eq 5 ]
+then
+	for (( i=0; i<5; i++ ))
+	do
+		echo -n "$i " # NOTICE THE SPACE!
+	done
+	echo 
 fi
+
+echo "Done."
