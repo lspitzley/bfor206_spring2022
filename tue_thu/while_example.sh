@@ -3,6 +3,16 @@
 
 # this script shows some while loop examples.
 
+# USAGE:
+# while_example.sh [OPTION]
+#
+# To run the first while loop
+# bash while_example.sh 1 
+#
+# To run the second while loop
+# bash while_example.sh 2
+
+
 
 #  define LIMIT here, otherwise it would have to 
 #+ be defined in each if or elif statement.
