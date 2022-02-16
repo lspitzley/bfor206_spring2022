@@ -17,7 +17,7 @@ result to a log file.
 
 ## Output
 **File:** The date/time and output of the ping
-          ping command.
+          command.
 
 
 
