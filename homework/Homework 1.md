@@ -14,6 +14,18 @@ You can use this to check a device is responding.
 ping 192.168.1.1 -c3
 ping google.com -c3
 ```
+## Finding the percentage of packets lost
+
+We will cover regular expressions in depth when we get to 
+the second half of the semester. 
+
+### grep
+The grep command uses regular expressions to match text. 
+
+A good overview of how to use this to get the percentage
+of packet loss can be found on this 
+[StackOverflow Answer](https://stackoverflow.com/questions/8314219/how-to-get-the-percent-of-packets-received-from-ping-in-bash)
+
 ### cut
 Split a string using the percentage sign and
 get the first part of the split:
