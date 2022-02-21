@@ -39,6 +39,9 @@ packets returned.
 
 ### mail (from mailutils package)
 
+The `sudo` command elevates you to root privilege for one command.
+It will ask for a password, which in this case is `kali`
+
 To install:
 ```bash
 sudo apt update # update software sources
@@ -48,10 +51,13 @@ sudo apt install mailutils # install mail package
 
 ```bash
 # to send a message using echo
-echo “message body” | mail -s “subject” lee@lee.local
+echo “message body” | mail -s “subject” kali@kali
 
 # check mail with:
-cat /var/mail/lee
+cat /var/mail/kali
+
+# or 
+mail
 ```
 
 ## Script functionality
@@ -86,9 +92,9 @@ timestamp for each entry (2pts)
 - Show the crontab file and the log demonstrating the program runs at the specified intervals.
 
 ### 5. Avoid hard coded inputs (3 pts)
-5.1 Accept addresses as arguments (1pt)
-5.2 Read addresses from a text file (1pt)
-5.3 Read *multiple* addresses from a text file (1pt)
+- 5.1 Accept addresses as arguments (1pt)
+- 5.2 Read addresses from a text file (1pt)
+- 5.3 Read *multiple* addresses from a text file (1pt)
 
 
 ## Scoring
