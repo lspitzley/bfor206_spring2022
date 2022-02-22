@@ -80,8 +80,7 @@ mail
 - Check the output status
 - If the ping is not responding or is missing packets, report this to the log
 and send an email
-- If the ping is high latency, report this to the log and send an email
-- If the device is normal, report this to the log
+- If the device is normal (i.e. 0% packet loss), report this to the log
 - The script should run every five minutes.
 
 
@@ -90,7 +89,8 @@ and send an email
 ### 1. Ping devices (2 pts)
 - 1.1  Show that the script pings addresses (1pt)
 - 1.2  You should ping at least *3* addresses. One of the addresses should contain your UAlbany NetID. For
-example, a NetID of AB123456 should ping 12.34.56.1. (1pt)
+	example, a NetID of AB123456 should ping 12.34.56.1. 
+	One address should be out-of-service (you can use 1.2.3.4) (1pt)
 
 ### 2. Log information (2 pts)
 - Show the log file with script output.
