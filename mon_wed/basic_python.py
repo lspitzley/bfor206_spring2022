@@ -47,7 +47,7 @@ func3(arg2=False, arg1='bfor 206')
 def add_numbers(a, b):
     """ add two numbers """
     
-    result = int(a) + int(b)
+    result = float(a) + float(b)
 
     return result
 
