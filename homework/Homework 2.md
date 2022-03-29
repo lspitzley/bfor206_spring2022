@@ -17,13 +17,12 @@ The data we will use comes from a
 # Setup
 
 You can download the data directly from the Kaggle page
-(account required), or from the BFOR 206 Github repo.
+(account required), or from the BFOR 206 Blackboard
+(in the 8-2 lecture notes).
 
 Use the tools and techniques from the Python labs
 that demonstrate how to use `pandas`. Some parts
 of the assignment may have been completed during labs.
-
-
 
 
 <!--  -->
@@ -80,24 +79,11 @@ instructor will grade the last commit before the due
 date.
 
 
-# Ideas for Q4
-
-1. Topics/keywords over time, like Python, Java, R, etc.
-2. Posts that contain images
-3. Top words with stopwords removed
-5. h-index for post authors (based on score)
-6. Are there fewer posts with text bodies as a community grows? (hard)
-7. Apply VADER sentiment on the titles of the post.
-8. Are there any communities that experienced decline? For this question,
-   define decline as a month-over-month decrease in the number of
-   comments for three or more consecutive months.
-
-
 # Checkpoints
 These are some quantities/values that you can use to check the
-correctness of your code. I will try to update these as needed.
+correctness of your code. I will update these as needed.
 
-   1. Total number of rows: 499,143
+   1. Total number of rows: 527,646
    2. The subreddit with the second-most distinct authors (Q1.3) is
-      `statistics`, with 31,304 different post authors.
-      `datascienceproject` has the fewest, at 217 distinct post authors.
+      `statistics`, with 32,982 different post authors.
+      `datascienceproject` has the fewest, at 232 distinct post authors.
