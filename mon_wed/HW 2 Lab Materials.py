@@ -25,6 +25,11 @@ aiml_data['author_created_date'] = pd.to_datetime(aiml_data['author_created_utc'
 
 aiml_data['created_date'] = pd.to_datetime(aiml_data['created_date'])
 
+# create a smaller subset of the data to make working faster
+# remove this before the full analysis
+aiml_data = aiml_data.sample(10000)
+
+
 aiml_data.info()
 
 # aiml_data.describe(include='all')
@@ -72,6 +77,38 @@ dow_plot.get_figure()
 dow_plot.get_figure().savefig('lab9-1.pdf')
 
 
+"""
+######################## Class 9-2 ####################
+"""
+#%% count words for the posts column
+
+words = aiml_data['post'].str.split(expand=True).stack().value_counts()
+
+#%% count words with all lowercase
+
+# example
+
+test_string = "This is a test string."
+test_string.lower()
+test_string.find('test') # shows the location where this is found
+
+words = aiml_data['post'].str.lower().str.split(expand=True).stack().value_counts()
+
+#%% get word counts for titles
+
+title_words = aiml_data['title'].str.lower().str.split(expand=True).stack().value_counts()
+
+# show top 20
+title_words.head(20)
+
+#%% alternative method
+# https://stackoverflow.com/questions/18936957/count-distinct-words-from-a-pandas-data-frame
+from collections import Counter
+results = Counter()
+aiml_data['title'].str.lower().str.split().apply(results.update)
+# print(results)
+
+results.most_common(20)
 
 
 
