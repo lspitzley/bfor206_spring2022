@@ -14,6 +14,9 @@ import pandas as pd
 
 aiml_data = pd.read_csv('data/reddit_database.csv')
 
+# take a subsample to make things faster
+aiml_data = aiml_data.sample(10000)
+
 #%% get information about the dataframe
 
 aiml_data.info()
@@ -86,6 +89,45 @@ dow_plot.get_figure()
 # this is probably not need if using a jupyter notebook
 dow_plot.get_figure().savefig('lab9-1.pdf', bbox_inches='tight')
 
+
+
+"""
+#################### Class 9-2 ######################
+"""
+
+#%% word counts
+
+# ﻿https://stackoverflow.com/questions/46786211/counting-the-frequency-of-words-in-a-pandas-data-frame
+words = aiml_data['post'].str.split(expand=True).stack().value_counts()
+
+# this method counts words with capitalization separately
+
+# instead we can use .str.lower() to convert everything to lowercase
+words = aiml_data['post'].str.lower().str.split(expand=True).stack().value_counts()
+
+#%% examples of how to change strings with built-in functions
+
+test_string = "This is a test string."
+test_string.lower()
+test_string.upper()
+test_string.find('test')
+
+
+#%% count the words in the title using lower case
+
+title_words = aiml_data['title'].str.lower().str.split(expand=True).stack().value_counts()
+
+# get top 20 from a pandas Series
+title_words.head(20)
+
+#%% alternative method that is probably a bit more efficient
+
+from collections import Counter
+results = Counter()
+aiml_data['title'].str.lower().str.split().apply(results.update)
+# print(results)
+
+results.most_common(20)
 
 
 
