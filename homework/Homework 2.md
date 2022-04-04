@@ -63,7 +63,11 @@ or other trickery to make things look nice.
 For an example of a notebook, check out this example on
 [basic `pandas` functionality](https://github.com/jakevdp/PythonDataScienceHandbook/blob/master/notebooks/03.03-Operations-in-Pandas.ipynb).
 
-
+## Point Reductions
+I will deduct points for certain things:
+- Submitting code as a screenshot instead of the actual `.py` file
+  or Jupyter Notebook. (-1 pt). Git is a tool for managing code,
+  therefore we should use this capability!
 
 # Submission
 
