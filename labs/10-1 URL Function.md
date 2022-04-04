@@ -22,27 +22,27 @@ formal tests.
 # Test Cases
 
 ## Case 1
-'''
+```
 Input: "https://www.github.com/"
 Output: ["https://www.github.com/"]
-'''
+```
 
 ## Case 2
-'''
+```
 Input: "https://www.github.com/lspitzley/bfor206_spring2022"
 Output: ["https://www.github.com/lspitzley/bfor206_spring2022"]
-'''
+```
 
 ## Case 3
-'''
+```
 Input: "There are no URLs in this string"
 Output: []
-'''
+```
 # Case 4
-'''
+```
 Input: "I like https://github.com, I also like https://bitbucket.com/"
 Output: ["https://github.com", "https://bitbucket.com/"]
-'''
+```
 
 # Submission instructions
 
