@@ -16,7 +16,7 @@ import re
 aiml_data = pd.read_csv('data/reddit_database.csv')
 
 # take a subsample to make things faster
-aiml_data = aiml_data.sample(10000)
+# aiml_data = aiml_data.sample(10000)
 
 #%% get information about the dataframe
 
@@ -98,6 +98,14 @@ dow_plot.get_figure().savefig('lab9-1.pdf', bbox_inches='tight')
 
 #%% word counts
 
+# better code that does not use so much memory
+post_words = aiml_data['post'].str.lower().str.split().explode().value_counts()
+print(post_words.head(20))
+
+
+
+"""
+# UPDATE: Class 10-2: This method uses too much memory
 # ﻿https://stackoverflow.com/questions/46786211/counting-the-frequency-of-words-in-a-pandas-data-frame
 words = aiml_data['post'].str.split(expand=True).stack().value_counts()
 
@@ -129,76 +137,22 @@ aiml_data['title'].str.lower().str.split().apply(results.update)
 # print(results)
 
 results.most_common(20)
-
+"""
 
 """
 ################# Class 10-1 ##################
 """
 
-#%% define find_urls function
-
-def find_urls(text):
-    """
-    This function will take a string
-    and search for URLs. It will 
-    return a list of any URLs that 
-    it finds. If the input is not
-    a string, it will attempt to 
-    force it into a string.
-    
-    The regular expression is from
-    http://urlregex.com/
-
-    Parameters
-    ----------
-    text : string
-        The text to search for URLs.
-
-    Returns
-    -------
-    A list of URLs. It will be an empty
-    list if there no URLs.
-
-    """
-    # print(text)
-    urls = re.findall(r'http[s]?://(?:[a-zA-Z]|[0-9]|[$-_@.&+]|[!*\(\),]|(?:%[0-9a-fA-F][0-9a-fA-F]))+', str(text))
-    return urls
-
-
-
-#%% test the function to see if it works
-
-# Test 1 - A single URL as input
-case_1_input = 'https://www.github.com/'
-case_1_output = ["https://www.github.com/"]
-assert find_urls(case_1_input) == case_1_output
-
-# Test 2 - longer URLs
-case_2_input = "https://www.github.com/lspitzley/bfor206_spring2022"
-case_2_output = ["https://www.github.com/lspitzley/bfor206_spring2022"]
-assert find_urls(case_2_input) == case_2_output
-
-# Test 3 - no URLs
-case_3_input = "There are no URLs in this string"
-case_3_output = []
-assert find_urls(case_3_input) == case_3_output
-
-# Test 4 - multiple URLs
-case_4_input = "I like https://github.com, I also like https://bitbucket.com/"
-case_4_output = ["https://github.com,", "https://bitbucket.com/"]
-assert find_urls(case_4_input) == case_4_output
-
-# Test 5 - numpy nan value as input
-import numpy as np
-case_5_input = np.nan
-case_5_output = []
-assert find_urls(case_5_input) == case_5_output
+# all of this code has moved to the 
+# text_processing.py file
 
 #%% apply the function to the post column
 
-urls_list = aiml_data['post'].apply(find_urls)
+import tue_thu.text_processing as text_processing
 
+urls_list = aiml_data['post'].apply(text_processing.find_urls)
 
+print(urls_list)
 
 
 
