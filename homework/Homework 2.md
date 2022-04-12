@@ -42,8 +42,8 @@ maximum of [14] possible points.
 
 1. Plot the total number of posts across all subreddits over time (line plot).
 2. Plot a histogram showing the distribution of post scores.
-3. Plot the average number of posts per day of the week.
-4. Plot the average number of posts per hour of the day.
+3. Plot the number of posts per day of the week.
+4. Plot the number of posts per hour of the day. 
 
 
 ## 3. Get insights from the data (4 points)
