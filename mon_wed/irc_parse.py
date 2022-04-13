@@ -11,7 +11,9 @@ import re
 #%% function to find hours and minutes
 
 def get_hours_minutes(row):
-    return {}
+    hour_minute = {}
+    hour_minute['hour'] = 1
+    return hour_minute
 
 
 #%% define some test cases
