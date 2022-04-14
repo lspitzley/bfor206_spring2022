@@ -41,9 +41,11 @@ maximum of [14] possible points.
 ## 2. Visualize the data (4 points)
 
 1. Plot the total number of posts across all subreddits over time (line plot).
+   - You can group by day or (better) group by month and year.
+   - Or, you can do a cumulative sum per day and plot that.
 2. Plot a histogram showing the distribution of post scores.
 3. Plot the number of posts per day of the week.
-4. Plot the number of posts per hour of the day. 
+4. Plot the number of posts per hour of the day.
 
 
 ## 3. Get insights from the data (4 points)
