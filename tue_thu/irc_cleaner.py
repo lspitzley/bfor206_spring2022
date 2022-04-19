@@ -10,4 +10,26 @@ the data.
 
 @author: ls458663
 """
+#%% imports
+import pandas as pd
+import irc_parse
+
+#%% read in data
+raw_log = []
+with open('../data/hackers.log', 'r', errors='ignore') as log_file:
+    raw_log = log_file.readlines()
+
+#%% create dataframe
+hackers = pd.DataFrame(raw_log, columns=['original_data'])
+
+
+#%% find rows that start with dates
+
+hackers['is_date_row'] = hackers['original_data'].apply(irc_parse.is_date_row)
+
+
+
+
+
+
 
