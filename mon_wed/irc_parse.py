@@ -153,6 +153,9 @@ def is_message(row):
         True if row belongs to chat log.
 
     """
+    if row[6] == '<':
+        return True
+    return False
 
 
 def find_urls(text):
