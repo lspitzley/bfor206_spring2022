@@ -24,3 +24,27 @@ hackers = pd.DataFrame(raw_log, columns=['original_data'])
 #%% use the is_date_row function
 # check if a row is actually a date.
 hackers['is_date_row'] = hackers['original_data'].apply(irc_parse.is_date_row)
+
+
+#%% check if it is a message row
+
+hackers['is_message_row'] = hackers['original_data'].apply(irc_parse.is_message)
+
+
+
+
+#%% save the cleaned dataframe
+# save the cleaned dataframe to our working folder
+hackers.to_csv('hackers_clean.csv')
+
+
+
+
+
+
+
+
+
+
+
+
