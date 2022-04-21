@@ -32,7 +32,9 @@ hackers['is_date_row'] = hackers['original_data'].apply(irc_parse.is_date_row)
 hackers['is_message'] = hackers['original_data'].apply(irc_parse.is_message)
 
 
+#%% save data to csv
 
+hackers.to_csv('hackers_clean.csv')
 
 
 
