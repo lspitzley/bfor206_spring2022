@@ -27,6 +27,10 @@ hackers = pd.DataFrame(raw_log, columns=['original_data'])
 
 hackers['is_date_row'] = hackers['original_data'].apply(irc_parse.is_date_row)
 
+#%% apply the is_message function
+
+hackers['is_message'] = hackers['original_data'].apply(irc_parse.is_message)
+
 
 
 
