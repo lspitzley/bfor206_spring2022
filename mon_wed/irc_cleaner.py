@@ -7,7 +7,7 @@ suitable for analysis in a Jupyter Notebook.
 """
 #%% imports
 import pandas as pd
-
+import nltk
 
 # import our functions
 import irc_parse
@@ -34,7 +34,8 @@ hackers['is_message_row'] = hackers['original_data'].apply(irc_parse.is_message)
 
 hackers['chat_words'] = hackers.loc[hackers['is_message_row']==True, 'original_data'].apply(irc_parse.get_chat_message)
 
-
+# use a lambda: https://www.w3schools.com/python/python_lambda.asp
+hackers['chat_word_list'] = hackers.loc[hackers['is_message_row']==True, 'chat_words'].apply(lambda x: nltk.tokenize.word_tokenize(x.lower()))
 
 #%% save the cleaned dataframe
 # save the cleaned dataframe to our working folder
