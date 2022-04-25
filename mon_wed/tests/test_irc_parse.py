@@ -16,7 +16,7 @@ def test_sanity():
 comment_row_1 = '01:17 < HeavenGuard> hello?\n' 
 comment_row_2 = '19:29 <+Cogitabundus> Some like chaos.\n'
 comment_row_3 = '19:29 <%Cogit1234> Some like chaos.\n'
-comment_row_4 = '19:29 <~leeroy> Some like < User1234>. It is 12:34 \n'
+comment_row_4 = '19:29 <~leeroy> Some like < User1234> . It is 12:34 \n'
 comment_row_5 = '20:06 < gucci|bebe> anybody have any tips?\n'
 comment_row_6 = '16:14 < Backbox[]> Still going over the tv thing?\n'
 comment_row_7 = '19:55 < {L}> hope its now good\n'
@@ -251,7 +251,7 @@ def test_get_user_prefix(row, expected):
 @pytest.mark.parametrize('row, expected', [(comment_row_1, 'hello?\n'),
                                            (comment_row_2, 'Some like chaos.\n'),
                                            (comment_row_3, 'Some like chaos.\n'),
-                                           (comment_row_4, 'Some like < User1234>. It is 12:34 \n'),
+                                           (comment_row_4, 'Some like < User1234> . It is 12:34 \n'),
                                            (comment_row_5, 'anybody have any tips?\n'),
                                            (comment_row_6, 'Still going over the tv thing?\n'),
                                            (comment_row_7, 'hope its now good\n'),

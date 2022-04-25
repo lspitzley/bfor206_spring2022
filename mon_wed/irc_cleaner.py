@@ -30,6 +30,9 @@ hackers['is_date_row'] = hackers['original_data'].apply(irc_parse.is_date_row)
 
 hackers['is_message_row'] = hackers['original_data'].apply(irc_parse.is_message)
 
+#%% tokenize the message row
+
+hackers['chat_words'] = hackers.loc[hackers['is_message_row']==True, 'original_data'].apply(irc_parse.get_chat_message)
 
 
 
