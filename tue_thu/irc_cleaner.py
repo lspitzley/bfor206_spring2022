@@ -12,6 +12,7 @@ the data.
 """
 #%% imports
 import pandas as pd
+import nltk
 import irc_parse
 
 #%% read in data
@@ -30,6 +31,16 @@ hackers['is_date_row'] = hackers['original_data'].apply(irc_parse.is_date_row)
 #%% apply the is_message function
 
 hackers['is_message'] = hackers['original_data'].apply(irc_parse.is_message)
+
+hackers['chat_message'] = hackers.loc[hackers['is_message'] == True, 'original_data'].apply(irc_parse.get_chat_message)
+
+"""
+could define a function
+def some_function(x):
+    return nltk.tokenize.word_tokenize(x.lower())
+# or just use a lambda
+"""
+hackers['chat_message_words'] = hackers.loc[hackers['is_message'] == True, 'chat_message'].apply(lambda x: nltk.tokenize.word_tokenize(x.lower()))
 
 
 #%% save data to csv

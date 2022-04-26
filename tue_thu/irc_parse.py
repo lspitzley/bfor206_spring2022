@@ -25,7 +25,9 @@ def sanity_check():
     return True
 
 def get_chat_message(row):
-    pass
+    
+    message = re.split(r'> ', row)
+    return "> ".join(message[1:])
 
 
 def get_current_date(dateline):
