@@ -36,7 +36,7 @@ attacks.
 3.	Which users spent the most *time* in the chat? (3pts)
 4.  Who are the administrators (username begins with `@`) (1pt).
 
-## 2. Messages (8pts)
+## 2. Messages (9pts)
 1.	Count the total number of written messages
     (only those with actual text content) (1 pts).
 2.	Find the most common words (only include message content) (2 pts)
@@ -44,7 +44,7 @@ attacks.
     This is a simple method that can identify some names of malware tools.
 4.	How many distinct URLs were posted in the chat? (1 pt)
 5.  Which URLs were posted the most (top 5)? (1 pt)
-6.  Which domains (e.g. `github.com/` or `youtube.com`) were shared the most. 
+6.  Which domains (e.g. `github.com/` or `youtube.com`) were shared the most. (1 pt)
 6.  Generate a list of sites on the Dark Web (sites ending in
     .onion) (1pt)
 
@@ -58,11 +58,12 @@ attacks.
    11 total tests. These are documented in the Homework 3 repo.
 
 # Grading
-There are 31 points available (20 from questions, 11 from tests).
+There are 32 points available (20 from questions, 11 from tests).
 The assignment is graded out of 25 points. Scores above 25 will
 receive extra credit.
 
-All analysis questions must be submitted using a Jupyter Notebook.
+All analysis questions must be submitted using a Jupyter Notebook. Your notebook should
+show the execution of your code and contain results that answer the questions.
 Screenshots will not be considered for this assignment!
 
 
